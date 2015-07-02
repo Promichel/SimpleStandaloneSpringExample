@@ -17,6 +17,9 @@ public class ApplicationConfiguration {
     @Value("${king.name}")
     private String kingsName;
 
+    /**
+     * This method is important if you are using @Value annotated fields with property files in Spring Configuration classes.
+     */
     @Bean
     public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
         return new PropertySourcesPlaceholderConfigurer();
